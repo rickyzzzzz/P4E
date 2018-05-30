@@ -50,7 +50,7 @@ while my_count < count:
 	html = urllib.request.urlopen(url, context=ctx).read()
 	soup = BeautifulSoup(html, 'html.parser')
 
-	# for loop to to get the 18th link
+	# for loop to to get the desired link
 	my_position = 0
 	tags = soup('a')
 	for tag in tags:
