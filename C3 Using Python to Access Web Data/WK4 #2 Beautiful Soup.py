@@ -46,7 +46,7 @@ position = int(input('Enter Position - '))
 
 # while loop to go to several links
 my_count = 0
-while my_count < count:
+for my_count in range(count):
 	html = urllib.request.urlopen(url, context=ctx).read()
 	soup = BeautifulSoup(html, 'html.parser')
 
@@ -58,5 +58,4 @@ while my_count < count:
 		if my_position <= position:
 			url = tag.get('href', None)
 	print('Retrieving: ', url)
-	my_count += 1
 
